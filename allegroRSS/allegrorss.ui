@@ -6,187 +6,196 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>970</width>
-    <height>519</height>
+    <width>959</width>
+    <height>553</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>allegroRSS</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>361</width>
-      <height>481</height>
-     </rect>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetMinAndMaxSize</enum>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_4">
-     <item>
-      <widget class="QTreeWidget" name="list_przedmoity">
-       <property name="indentation">
-        <number>2</number>
-       </property>
-       <column>
-        <property name="text">
-         <string>Przedmiot</string>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
+      </property>
+      <item>
+       <widget class="QTreeWidget" name="list_przedmoity">
+        <property name="maximumSize">
+         <size>
+          <width>360</width>
+          <height>16777215</height>
+         </size>
         </property>
-       </column>
-      </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QPushButton" name="btn_dodaj">
-         <property name="text">
-          <string>Dodaj</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btn_usun">
-         <property name="text">
-          <string>Usuń</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>10</y>
-      <width>581</width>
-      <height>481</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <property name="sizeConstraint">
-      <enum>QLayout::SetDefaultConstraint</enum>
-     </property>
-     <item>
-      <widget class="QTreeWidget" name="list_oferty">
-       <column>
-        <property name="text">
-         <string>Oferta</string>
+        <property name="indentation">
+         <number>2</number>
         </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Cena</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Typ</string>
-        </property>
-       </column>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTabWidget" name="tabWidget">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>220</height>
-        </size>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <widget class="QWidget" name="tab">
-        <attribute name="title">
-         <string>Szczegóły</string>
-        </attribute>
-        <widget class="QGraphicsView" name="graphicsView">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>10</y>
-           <width>191</width>
-           <height>171</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="btn_ignoruj">
-         <property name="geometry">
-          <rect>
-           <x>210</x>
-           <y>10</y>
-           <width>75</width>
-           <height>23</height>
-          </rect>
-         </property>
+        <column>
          <property name="text">
-          <string>Ignoruj</string>
+          <string>Przedmiot</string>
          </property>
-        </widget>
-        <widget class="QPushButton" name="btn_idz">
-         <property name="geometry">
-          <rect>
-           <x>290</x>
-           <y>10</y>
-           <width>75</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Idź</string>
-         </property>
-        </widget>
+        </column>
        </widget>
-       <widget class="QWidget" name="tab_2">
-        <attribute name="title">
-         <string>Lista ignorowanych</string>
-        </attribute>
-        <layout class="QVBoxLayout" name="verticalLayout_3">
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_2">
-           <item>
-            <widget class="QTreeWidget" name="list_ignorowane">
-             <column>
-              <property name="text">
-               <string>Oferta</string>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="btn_dodaj">
+          <property name="text">
+           <string>Dodaj</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_usun">
+          <property name="text">
+           <string>Usuń</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item>
+       <widget class="QTreeWidget" name="list_oferty">
+        <column>
+         <property name="text">
+          <string>Oferta</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Cena</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Typ</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>220</height>
+         </size>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Szczegóły</string>
+         </attribute>
+         <widget class="QGraphicsView" name="graphicsView">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>191</width>
+            <height>171</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_ignoruj">
+          <property name="geometry">
+           <rect>
+            <x>210</x>
+            <y>10</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Ignoruj</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_idz">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>10</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Idź</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>Lista ignorowanych</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QTreeWidget" name="list_ignorowane">
+              <column>
+               <property name="text">
+                <string>Oferta</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_przywroc">
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>16777215</height>
+               </size>
               </property>
-             </column>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_przywroc">
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Przywróć</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
+              <property name="text">
+               <string>Przywróć</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
        </widget>
-      </widget>
-     </item>
-    </layout>
-   </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>970</width>
-     <height>21</height>
+     <width>959</width>
+     <height>24</height>
     </rect>
    </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

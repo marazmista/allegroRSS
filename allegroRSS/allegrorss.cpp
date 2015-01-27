@@ -20,8 +20,11 @@ allegroRSS::~allegroRSS()
 
 
 void allegroRSS::dodajPrzedmiot() {
-    QString inputTytul = QInputDialog::getText(this,"Podaj szukany przedmiot","Przedmiot",QLineEdit::Normal);
-    QString linkRss = QInputDialog::getText(this,"Kanał RSS","URL",QLineEdit::Normal);
+//    QString inputTytul = QInputDialog::getText(this,"Podaj szukany przedmiot","Przedmiot",QLineEdit::Normal);
+//    QString linkRss = QInputDialog::getText(this,"Kanał RSS","URL",QLineEdit::Normal);
+    QString inputTytul = QInputDialog::getText(this,"Podaj szukany przedmiot","Przedmiot",QLineEdit::Normal,"ds");
+    QString linkRss = QInputDialog::getText(this,"Kanał RSS","URL",QLineEdit::Normal,"http://allegro.pl/rss.php/search?string=duch+w+sieci&selected_country=1&search_type=1&postcode_enabled=1");
+
 
     przedmiot *p = new przedmiot();
     p->przedmiotTytul = inputTytul;
@@ -82,21 +85,21 @@ void allegroRSS::parseRssXml(const int itemId) {
         xml.readNext();
 
         oferta *o = new oferta();
-        if (xml.name().toString() == "title") {
-            xml.readNext();
-            if (xml.isCharacters() && !xml.isWhitespace()) {
-                o->tytul = xml.text().toString();
-                //                QMessageBox::information(this,"asf",xml.text().toString());
-                p->oferty.append(o);
+//        if (xml.name().toString() == "item") {
+//            xml.readNext();
+//            if (!xml.isStartElement())
+//                xml.readNext();
 
-            }
+            if (xml.name().toString() == "title") {
+                xml.readNext();
+                if (xml.isCharacters() && !xml.isWhitespace()) {
+                   o->tytul = xml.text().toString();
+                    //                QMessageBox::information(this,"asf",xml.text().toString());
+                    p->oferty.append(o);
+                }
+
+//            }
         }
-//        if (xml.isStartElement()) {
-//            if (xml.name().toString() == "title")
-//               o->tytul = xml.text().toString();
-//         } else if (xml.isEndElement()) {
-//
-//        }
     }
 
     for (int q = 0; q< p->oferty.count(); q++) {
